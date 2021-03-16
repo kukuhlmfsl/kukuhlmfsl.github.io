@@ -38,7 +38,9 @@ xhr.onload = () => {
 xhr.send();
 */
    document.querySelector("button").onclick=()=>{
-   writeUser(
+   if(!document.querySelector("#nama").value)alert("isi nama!");
+   if(!document.querySelector("#no").value)alert("isi nomor!");
+   if(document.querySelector("#nama").value&&document.querySelector("#no").value)writeUser(
 document.querySelector("#nama").value,
 document.querySelector("#no").value
 
